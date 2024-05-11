@@ -5,9 +5,17 @@ function TodoRowItem(props) {
   return (
     <>
       <tr>
-        <th scope="col">{rowNumber}</th>
+        <th scope="row">{rowNumber}</th>
         <td>{rowDescription}</td>
         <td>{rowAssigned}</td>
+        <td>
+          <button
+            className="btn btn-danger"
+            onClick={() => props.deleteTodo(rowNumber)}
+          >
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </td>
       </tr>
     </>
   );
